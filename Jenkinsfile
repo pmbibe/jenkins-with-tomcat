@@ -18,6 +18,11 @@
     def version = "1.4"
 
     node("jenkins-agent") {
+            stage("Pull code from GitLab"){
+                    // git branch: "${branch}", credentialsId: "${userGit}", url: "${repository}"
+                    git branch: "${branch}", url: "${repository}"
+            }
+            
             stage("Search and Dowload"){
                 withCredentials([usernamePassword(credentialsId: 'jenkins_nexus', passwordVariable: 'nexus_password', usernameVariable: 'nexus_username')]) {
                 sh """
