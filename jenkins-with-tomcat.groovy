@@ -1,7 +1,7 @@
     // def userGit = "bibee"
     def userDocker = "babibe2211"
     // def repository = "https://github.com/PETW-Dapps/PETW-LDP"
-    def repository = "https://github.com/yankils/hello-world"
+    def repository = "https://github.com/pmbibe/jenkins-with-tomcat"
     def dockerRegistry = "https://registry.hub.docker.com"
     def branch = "master"
     def prj = "tomcat"
@@ -15,7 +15,7 @@
     def artifactID = "tomcat-app"
     def localFile = "webapp.war"
     def extension = "war"
-    def version = "1.2"
+    def version = "1.3"
 
     node("jenkins-agent") {
             stage("Pull code from GitLab"){
